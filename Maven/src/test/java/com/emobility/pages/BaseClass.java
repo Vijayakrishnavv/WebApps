@@ -8,6 +8,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
 
 import com.emobility.utility.BrowserFactory;
 import com.emobility.utility.ConfigDataProvider;
@@ -31,11 +32,18 @@ public class BaseClass
 		
 	}
 	
-	
+	@Parameters({"browser","appURL"})
 	@BeforeClass
-	public void setUp()
+	public void setUp(String browser , String appURL)
 	{
-		driver = BrowserFactory.startApplication(driver, config.getBroswer() , config.getStagingURL());
+		
+		// This we are taking from POM.xml maven build in configure section in POM
+
+		driver = BrowserFactory.startApplication(driver, browser , appURL);
+
+		//this we are taking from config properties file
+		//driver = BrowserFactory.startApplication(driver, config.getBroswer() , config.getStagingURL());
+		
 	}
 	
 	@AfterClass

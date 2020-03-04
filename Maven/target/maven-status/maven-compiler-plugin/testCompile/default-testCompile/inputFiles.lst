@@ -1,6 +1,8 @@
-C:\Users\WORK\eclipse-workspace\Maven\src\test\java\com\emobility\testcases\LoginToPortal.java
-C:\Users\WORK\eclipse-workspace\Maven\src\test\java\com\emobility\utility\ExcelDataProvider.java
-C:\Users\WORK\eclipse-workspace\Maven\src\test\java\com\emobility\pages\LoginPage.java
-C:\Users\WORK\eclipse-workspace\Maven\src\test\java\com\emobility\pages\BaseClass.java
-C:\Users\WORK\eclipse-workspace\Maven\src\test\java\com\emobility\utility\ConfigDataProvider.java
-C:\Users\WORK\eclipse-workspace\Maven\src\test\java\com\emobility\utility\BrowserFactory.java
+C:\Users\WORK\git\WebApps\Maven\src\test\java\com\emobility\utility\ConfigDataProvider.java
+C:\Users\WORK\git\WebApps\Maven\src\test\java\com\emobility\pages\LoginPage.java
+C:\Users\WORK\git\WebApps\Maven\src\test\java\com\emobility\pages\BaseClass.java
+C:\Users\WORK\git\WebApps\Maven\src\test\java\com\emobility\testcases\LoginToPortal.java
+C:\Users\WORK\git\WebApps\Maven\src\test\java\com\emobility\utility\BrowserFactory.java
+C:\Users\WORK\git\WebApps\Maven\src\test\java\com\emobility\pages\CRMHomePage.java
+C:\Users\WORK\git\WebApps\Maven\src\test\java\com\emobility\utility\ExcelDataProvider.java
+C:\Users\WORK\git\WebApps\Maven\src\test\java\com\emobility\utility\Helper.java
