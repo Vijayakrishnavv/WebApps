@@ -44,6 +44,7 @@ public class BaseClass
 		//this we are taking from config properties file
 		//driver = BrowserFactory.startApplication(driver, config.getBroswer() , config.getStagingURL());
 		
+		
 	}
 	
 	@AfterClass

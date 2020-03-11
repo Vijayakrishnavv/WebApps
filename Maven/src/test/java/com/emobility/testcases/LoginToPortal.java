@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 
 import com.emobility.pages.BaseClass;
 import com.emobility.pages.CRMHomePage;
+import com.emobility.pages.CRMNewSearchPage;
 import com.emobility.pages.LoginPage;
 import com.emobility.utility.Helper;
 
@@ -28,10 +29,23 @@ public class LoginToPortal extends BaseClass {
 		
 		CRMHomePage homepage = PageFactory.initElements(driver, CRMHomePage.class);
 		
-		homepage.navigateToModule();
+		homepage.countModulesForUser();
+		
+		//homepage.navigateToModule();
+		
+	}
+	
+	@Test(priority = 2)
+	public void search_Add_CustomerPage()
+	{
+		
+		CRMNewSearchPage searchAddPage = PageFactory.initElements(driver, CRMNewSearchPage.class );
+		
+		searchAddPage.searchCustomer(excel.getStringData("SearchAddCustomer",0,0));
 		
 		
 		
 	}
+	
 
 }

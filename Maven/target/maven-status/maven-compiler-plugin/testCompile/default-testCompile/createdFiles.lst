@@ -6,3 +6,4 @@ com\emobility\utility\ExcelDataProvider.class
 com\emobility\pages\CRMHomePage.class
 com\emobility\testcases\LoginToPortal.class
 com\emobility\utility\Helper.class
+com\emobility\pages\CRMNewSearchPage.class
