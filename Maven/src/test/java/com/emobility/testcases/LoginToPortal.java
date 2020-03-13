@@ -31,11 +31,11 @@ public class LoginToPortal extends BaseClass {
 		
 		homepage.countModulesForUser();
 		
-		//homepage.navigateToModule();
+		homepage.navigateToModule();
 		
 	}
 	
-	@Test(priority = 2)
+	@Test(priority = 3)
 	public void search_Add_CustomerPage()
 	{
 		
@@ -45,6 +45,15 @@ public class LoginToPortal extends BaseClass {
 		
 		
 		
+	}
+	
+ 	@Test(priority = 2)
+	public void createNewCustomer()
+	{
+		
+		CRMNewSearchPage createCustomer = PageFactory.initElements(driver, CRMNewSearchPage.class);
+		
+		createCustomer.createNewCustomer(excel.getStringData("NewCustomer", 0, 0), excel.getStringData("NewCustomer", 0, 1) , excel.getStringData("NewCustomer", 0, 2), excel.getStringData("NewCustomer", 0, 3) , excel.getNumericData("NewCustomer", 0, 4) , excel.getStringData("NewCustomer", 0, 5) , excel.getNumericData("NewCustomer", 0, 6) ,excel.getStringData("NewCustomer", 0, 7) );
 	}
 	
 

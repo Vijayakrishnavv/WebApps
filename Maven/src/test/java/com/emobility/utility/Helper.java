@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.concurrent.TimeUnit;
 import java.util.logging.FileHandler;
 
 import org.openqa.selenium.OutputType;
@@ -13,7 +14,7 @@ import org.openqa.selenium.WebDriver;
 
 public class Helper 
 {
-	WebDriver driver;
+	 WebDriver driver;
 	
 	public static void captureScreenshot(WebDriver driver)
 	{
@@ -56,6 +57,27 @@ public class Helper
 	public void handleAlerts()
 	{
 		
+		
+	}
+	
+	public  void imp_wait()
+	{
+		
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
+		
+		
+	}
+	
+	public void thread_wait()
+	{
+		
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 	}
 

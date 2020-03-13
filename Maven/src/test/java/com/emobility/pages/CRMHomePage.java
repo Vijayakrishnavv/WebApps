@@ -36,7 +36,7 @@ public class CRMHomePage {
 	@FindBy(how = How.CSS, using = "a[class*='DivBox'][href*='Admin.aspx']")
 	WebElement adminModule;
 
-	@FindBy(xpath = "//a[@class='DivBox'][@href='CRMNew.aspx']")
+	@FindBy(css = "a[href*='CRMNew.aspx'][title*='Customer Relation Management']")
 	WebElement crmModule;
 
 	public void countModulesForUser() {
@@ -80,12 +80,7 @@ public class CRMHomePage {
 	public void navigateToModule() {
 
 		crmModule.click();
-		try {
-			Thread.sleep(100000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
 	}
 
 	public void homeVerify() {

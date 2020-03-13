@@ -1,12 +1,17 @@
 package com.emobility.pages;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
+import com.emobility.utility.Helper;
+
 public class CRMNewSearchPage 
 {
+	Helper help;
 	
 	WebDriver driver;
 	
@@ -21,11 +26,11 @@ public class CRMNewSearchPage
 	@FindBy(id="tabBtnStreet")WebElement searchByAddress;
 	@FindBy(how = How.ID , using ="tabBtnNotes") WebElement searchByNotes;
 	
-	@FindBy(id="m_SearchBoxText")WebElement searchCustomer;
+	@FindBy(xpath="//input[@id='m_SearchBoxText']")WebElement searchCustomer;
 	
 	@FindBy(id="m_SearchBoxSearchBtn")WebElement searchBtn;
 	
-	@FindBy(id="m_btnAddNewCustomer")WebElement addNewCustomerbtn;
+	@FindBy(xpath="//button[@id='m_btnAddNewCustomer']")WebElement addNewCustomerbtn;
 	
 	@FindBy(how=How.ID, using = "m_ButtonCreateNewCustomer") WebElement createCustomerBtn;
 	
@@ -42,20 +47,53 @@ public class CRMNewSearchPage
 	@FindBy(id="Comments")WebElement comment ;
 	
 	
-	public void createNewCustomer()
+	public void createNewCustomer(String cfn, String cln, String ccity , String cstreet , double chn , String cemail , double cph , String ccmts)
 	{
+		
+		
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
+		addNewCustomerbtn.click();
+		
+	
+
+		firstName.sendKeys(cfn);
+		
+		
+		
+		lastName.sendKeys(cln);
+		
+		city.sendKeys(ccity);
+		
+		street.sendKeys(cstreet);
+		
+		houseNumber.sendKeys(String.valueOf(chn));
+		
+		email.sendKeys(cemail);
+		
+		phoneNumber.sendKeys(String.valueOf(cph));
+		
+		comment.sendKeys(ccmts);
+		
+		createCustomerBtn.click();
 		
 	}
 	
 	public void searchCustomer(String searchCRMCustomer)
 	{
+		
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
 		searchCustomer.sendKeys(searchCRMCustomer);
+		
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
 		searchBtn.click();
-		
-		
+	
 		
 	}
 	
+
 	
 	
 	
