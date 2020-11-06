@@ -45,9 +45,10 @@ public class BaseClass
 		//driver = BrowserFactory.startApplication(driver, config.getBroswer() , config.getStagingURL());
 		
 		
+		
 	}
 	
-	@AfterClass
+	//@AfterClass
 	public void tearDown()
 	{
 		BrowserFactory.closeBrowser(driver);

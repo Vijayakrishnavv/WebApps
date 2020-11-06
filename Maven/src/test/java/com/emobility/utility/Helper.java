@@ -11,6 +11,7 @@ import java.util.logging.FileHandler;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Helper 
 {
@@ -69,7 +70,17 @@ public class Helper
 		
 	}
 	
-	public void thread_wait()
+	public  WebDriver explicit()
+	{
+		
+		WebDriverWait wait=new WebDriverWait(driver, 30);
+		
+		return driver;
+		
+		
+	}
+	
+	public void threadWait()
 	{
 		
 		try {

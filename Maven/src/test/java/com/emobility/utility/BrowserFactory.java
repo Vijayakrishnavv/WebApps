@@ -10,12 +10,12 @@ public class BrowserFactory
 
 {
 
-	public static WebDriver startApplication(WebDriver driver, String browserName, String appURL) {
-		if (browserName.equals("Chrome")) {
+	public static WebDriver startApplication(WebDriver driver, String browser, String appURL) {
+		if (browser.equals("Chrome")) {
 			System.setProperty("webdriver.chrome.driver", "./Drivers/chromedriver.exe");
 			driver = new ChromeDriver();
 
-		} else if (browserName.equals("Firefox")) {
+		} else if (browser.equals("Firefox")) {
 
 			System.setProperty("webdriver.gecko.driver", "./Drivers/geckodriver.exe");
 			driver = new FirefoxDriver();

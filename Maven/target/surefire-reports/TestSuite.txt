@@ -1,4 +1,18 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 26.956 s - in TestSuite
+Tests run: 13, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 72.016 s <<< FAILURE! - in TestSuite
+com.emobility.testcases.LoginToPortal.verifyPhoneNumber  Time elapsed: 0.093 s  <<< FAILURE!
+java.lang.AssertionError: expected [Please enter the mobile number] but found [Please enter a valid country code]
+	at com.emobility.testcases.LoginToPortal.verifyPhoneNumber(LoginToPortal.java:84)
+
+com.emobility.testcases.LoginToPortal.addNewCustomer  Time elapsed: 50.222 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: 
+Expected condition failed: waiting for text ('New customer created, please wait') to be present in element [[ChromeDriver: chrome on WINDOWS (77b4fd15b0004672419d64b0b22cd553)] -> id: m_StatusCreateCustomer] (tried for 50 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-8MDILRI', ip: '192.168.0.100', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.183, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\WORK\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:59043}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 77b4fd15b0004672419d64b0b22cd553
+	at com.emobility.testcases.LoginToPortal.addNewCustomer(LoginToPortal.java:100)
+
