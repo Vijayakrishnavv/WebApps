@@ -1,6 +1,9 @@
 package com.emobility.testcases;
 
+import static org.testng.Assert.assertEquals;
+
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.emobility.pages.BaseClass;
@@ -17,10 +20,13 @@ public class LoginToPortal extends BaseClass {
 		LoginPage lpage = PageFactory.initElements(driver, LoginPage.class);
 
 		lpage.loginToCRM(excel.getStringData("Login", 0, 0), excel.getStringData("Login", 0, 1));
+		
+		Assert.assertEquals(driver.getTitle(), "Portal's Home");
 
 	}
-
-	@Test(priority = 1)
+	
+	
+	@Test(priority = 1, dependsOnMethods = "appLogin")
 
 	public void homePaage() {
 

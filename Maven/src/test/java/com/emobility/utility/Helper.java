@@ -8,9 +8,13 @@ import java.util.Date;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.FileHandler;
 
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Helper 
@@ -31,6 +35,8 @@ public class Helper
 			
 			System.out.println("Not able to take screenshot"+e.getMessage());
 		}
+		
+		
 			
 		
 	}
@@ -55,11 +61,101 @@ public class Helper
 	}
 	
 	
-	public void handleAlerts()
+	public void acceptAlert()
 	{
+		
+		Alert alert = driver.switchTo().alert();
+		alert.accept();
+		
 		
 		
 	}
+	
+	public void dismissaAlert()
+	{
+		
+		Alert alert = driver.switchTo().alert();
+		alert.dismiss();
+		
+		
+		
+	}
+	
+	public void getAlertText()
+	{
+		
+		Alert alert = driver.switchTo().alert();
+		alert.getText();
+		
+		
+		
+	}
+	
+	public void sendKeyToAlert(String alertText)
+	{
+		
+		Alert alert = driver.switchTo().alert();
+		alert.sendKeys(alertText);
+		
+		
+		
+	}
+	
+	
+	public void handleWindow(String window)
+	{
+		
+		driver.getWindowHandle();
+		
+		driver.switchTo().window(window);
+		
+	}
+	
+	
+	public void handleWindows(String childWindow)
+	{
+		
+		
+		driver.getWindowHandles();
+		
+		driver.switchTo().window(childWindow);
+		
+	}
+	
+	public void dragAnDrop(WebElement source , WebElement target )
+	{
+		
+		Actions action=new Actions(driver);					
+		
+        action.dragAndDrop(source, target).build().perform();
+		
+       
+        
+	}
+	
+	
+	public void doubleclick()
+	{
+		Actions action = new Actions(driver);
+		
+		action.doubleClick().perform();
+		
+	}
+	
+	
+	public void rightClick()
+	{
+		
+		Actions action = new Actions(driver);
+		action.contextClick().perform();
+		
+		action.contextClick(driver.findElement(By.xpath(""))).perform();
+		
+		
+		
+	}
+	
+	
 	
 	public  void imp_wait()
 	{
